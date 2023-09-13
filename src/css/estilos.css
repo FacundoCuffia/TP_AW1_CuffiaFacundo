@@ -1,0 +1,80 @@
+:root {
+    --primario: rgb(37, 47, 68);
+    --primarioOscuro: #144081;
+    --secundario: #ffa600;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #FFF;
+    --blancoSecundario: #e2e2e2;
+    --negro: #000;
+    --fuentePrincipal: 'Kanit', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    font-family: var(--fuentePrincipal);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+main{
+    margin: 3rem;
+}
+
+
+header{
+    background-color: var(--primario);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Separa el contenido del header*/
+}
+
+h1{
+    margin: 0;
+    background-color: var(--secundario);
+    padding: 2rem 2rem;
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 6rem;
+
+}
+
+.navegador{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.navegador__link{
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr;
+}
+
+footer{
+    background-color: var(--primarioOscuro);
+    color: var(--blanco);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
