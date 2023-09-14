@@ -1,8 +1,8 @@
 :root {
-    --primario: rgb(37, 47, 68);
-    --primarioOscuro: #144081;
-    --secundario: #ffa600;
-    --secundarioOscuro: rgb(233, 187, 2);
+    --primario: #144081;
+    --primarioOscuro: rgb(37, 47, 68);
+    --secundario: rgb(26, 131, 22);
+    --secundarioOscuro: #ffa600;
     --blanco: #FFF;
     --blancoSecundario: #e2e2e2;
     --negro: #000;
@@ -29,7 +29,7 @@ main{
     margin: 3rem;
 }
 
-
+/*ENCABEZADO Y BARRA DE NAVEGACIÓN*/
 header{
     background-color: var(--primario);
     margin: 0;
@@ -41,11 +41,10 @@ header{
 h1{
     margin: 0;
     background-color: var(--secundario);
-    padding: 2rem 2rem;
+    padding: 0.4rem 2rem;
     color: var(--blanco);
     font-family: var(--fuentePrincipal);
-    font-size: 6rem;
-
+    font-size: 6.5rem;
 }
 
 .navegador{
@@ -59,17 +58,104 @@ h1{
     color: var(--blanco);
 }
 
+.navegador__link:hover{
+    color: var(--secundarioOscuro);
+}
+
+/*SECCION DE INSTITUCIÓN*/
 .nosotros{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: var(--blancoSecundario);
+    padding: 2rem;
+    border-radius: 0.3rem;
 }
 
+#nosotros__textos__titulo{
+    font-size: 5rem;
+    margin: 0rem 1rem;
+    color: var(--primarioOscuro);
+}
+
+.nosotros__textos__parrafo{
+    margin: 0.5rem 1rem;
+}
+
+.nosotros__textos__carrousel{
+    position: relative;
+    overflow: hidden;
+}
+
+.nosotros__textos__carrousel__imagen{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: background-image 0.05s step-end;
+}
+
+@keyframes carrousel {
+    0% {
+        background-image: url('/src/img/carrousel_1.jpg');
+    }
+    33% {
+        background-image: url('/src/img/carrousel_2.jpg');
+    }
+    66% {
+        background-image: url('/src/img/carrousel_3.jpg');
+    }
+    100% {
+        background-image: url('/src/img/carrousel_4.jpg');
+    }
+}
+
+.nosotros__textos__carrousel__imagen{
+    animation: carrousel 15s linear infinite;
+}
+
+/*SECCION DE SERVICIOS*/
 .servicios{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr 1fr;
 }
 
+#nuestros{
+    font-size: 5rem;
+    text-align: center;
+    margin: 2rem 2rem;
+}
+
+.servicios__item{
+    background-color: var(--blancoSecundario);
+    margin: 1rem;
+}
+
+.servicios__item__titulo{
+    text-align: left;
+    margin: 0 0.5rem;
+}
+
+.servicios__item__parrafo{
+    margin: 0.5rem 0.5rem;
+}
+
+/*SECCION DE UBICACION*/
+.mapa{
+    background-color: var(--blancoSecundario);
+    border-radius: 0.3rem;
+}
+
+.mapa__titulo{
+    text-align: center;
+    font-size: 5rem;
+    color: var(--primarioOscuro);
+}
+
+.mapa__iframe{
+
+}
+
+/*SECCION FOOTER*/
 footer{
     background-color: var(--primarioOscuro);
     color: var(--blanco);
