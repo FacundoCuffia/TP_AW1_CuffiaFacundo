@@ -63,6 +63,12 @@ main{
 }
 
 /*SECCION DE INSTITUCIÓN*/
+.servicios__titulo{
+    color: var(--primarioOscuro);
+    padding: 10px;
+    text-align: center;
+}
+
 .nosotros__textos__carrousel{
     position: relative;
     overflow: hidden;
@@ -113,12 +119,4 @@ main{
 
 .pie__izquierdo{
     margin: 0px;
-}
-
-.pie__derecho{
-
-}
-
-.pie__derecho__link{
-    
 }
