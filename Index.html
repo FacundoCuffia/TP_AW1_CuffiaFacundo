@@ -13,17 +13,15 @@
     <title>GreenVille - Home</title>
 </head>
 <body>
-    <header>
-        <h1>GreenVille</h1>
-        
-        <nav class="navegador">
-            <a class="navegador__link" href="Index.html">Home</a>
-            <a class="navegador__link" href="Propiedades.html">Propiedades</a>
-            <a class="navegador__link"href="Contacto.html">Contacto</a>
+    <header class="encabezado">
+        <h1 class="encabezado__titulo">GreenVille</h1>
+        <nav class="encabezado__navegador">
+            <a class="encabezado__navegador__link" href="Index.html">Home</a>
+            <a class="encabezado__navegador__link" href="Propiedades.html">Propiedades</a>
+            <a class="encabezado__navegador__link"href="Contacto.html">Contacto</a>
         </nav>
     </header>
     <main>
-        
         <section class="nosotros">
             <div class="nosotros__textos">
                 <h2 id="nosotros__textos__titulo">Nosotros</h2>
@@ -34,40 +32,46 @@
             </div>
         </section>
 
-        <h2 id="nuestros">Nuestros servicios</h2>
         <section class="servicios">
-            <div class="servicios__item">
-                <img src="src/img/alquiler.jpeg" alt="alquiler" height="200" width="300">
-                <h3 class="servicios__item__titulo">Alquiler</h3>
-                <p class="servicios__item__parrafo">Realizamos contratos de alquiler de la propiedad bajo estrictas normas de calidad para garantizar el mayor grado de satisfacción en el cliente. Sin retraso ni costos extra al pactado en primera instancia. Usted es la prioridad.</p>
-            </div>
-            <div class="servicios__item">
-                <img src="src/img/asesoramiento.jpg" alt="alquiler" height="200" width="300">
-                <h3 class="servicios__item__titulo">Asesoramiento</h3>
-                <p class="servicios__item__parrafo">Nuestro servicio de asesoramiento garantiza que el cliente pueda encontrar la propiedad que más se ajuste a sus posibilidades sin dejar de lado el confort o aquellos requisitos que busque en su siguiente hogar</p>
-            </div>
-            <div class="servicios__item">
-                <img src="src/img/venta.jpg" alt="alquiler" height="200" width="300">
-                <h3 class="servicios__item__titulo">Venta</h3>
-                <p class="servicios__item__parrafo">Contamos con los mejores agentes para realizar recorridos por nuestras propiedades en venta y asegurar la conformidad del cliente. Amplio catálogo de inmuebles con actualizacion frecuente a los mejores precios.</p>
+            <h2 id="servicios__titulo">Nuestros servicios</h2>
+            <div class="servicios__contenedor">
+                <div class="servicios__contenedor__item">
+                    <img src="src/img/alquiler.jpeg" alt="alquiler" height="200" width="300">
+                    <h3 class="servicios__contenedor__item__titulo">Alquiler</h3>
+                    <p class="servicios__contenedor__item__parrafo">Realizamos contratos de alquiler de la propiedad bajo estrictas normas de calidad para garantizar el mayor grado de satisfacción en el cliente. Sin retraso ni costos extra al pactado en primera instancia. Usted es la prioridad.</p>
+                </div>
+                <div class="servicios__contenedor__item">
+                    <img src="src/img/asesoramiento.jpg" alt="alquiler" height="200" width="300">
+                    <h3 class="servicios__contenedor__item__titulo">Asesoramiento</h3>
+                    <p class="servicios__contenedor__item__parrafo">Nuestro servicio de asesoramiento garantiza que el cliente pueda encontrar la propiedad que más se ajuste a sus posibilidades sin dejar de lado el confort o aquellos requisitos que busque en su siguiente hogar</p>
+                </div>
+                <div class="servicios__contenedor__item">
+                    <img src="src/img/venta.jpg" alt="alquiler" height="200" width="300">
+                    <h3 class="servicios__contenedor__item__titulo">Venta</h3>
+                    <p class="servicios__contenedor__item__parrafo">Contamos con los mejores agentes para realizar recorridos por nuestras propiedades en venta y asegurar la conformidad del cliente. Amplio catálogo de inmuebles con actualizacion frecuente a los mejores precios.</p>
+                </div>
             </div>
         </section>
 
         <section class="mapa">
             <h2 class="mapa__titulo">Nuestra oficina</h2>
-            <div class="mapa__iframe">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425.57649000706306!2d-64.17852400604266!3d-31.424816710611527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291218caab9%3A0x9da29a7e65e75284!2sBalcarce%20534%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1694650328002!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
         </section>
 
     </main>
-    <footer>
-        <p>GreenVille Inmobiliaria</p>
-        <address>
-            Balcarce 534 - Córdoba - Córdoba capital
-            CP: X5000
-        </address>
-        <p>Desarrollado por Facundo Cuffia 2023</p>
+    <footer class="pie">
+        <div class="pie__izquierda">
+            <p>GreenVille Inmobiliaria</p>
+            <address>
+                Balcarce 534, Córdoba - Córdoba capital
+                CP: X5000
+            </address>
+        </div>
+        <div class="pie__derecha">
+            <p>Social media</p>
+            <a href="#" class="pie__derecha__link">Facebook</a>
+            <a href="#" class="pie__derecha__link">Twitter</a>
+            <a href="#" class="pie__derecha__link">Instagram</a>
+        </div>
     </footer>
 </body>
 </html>

@@ -9,20 +9,25 @@
     --fuentePrincipal: 'Kanit', sans-serif;
 }
 
+/*PRESETEO DE LA WEB*/
 html{
     box-sizing: border-box;
-    font-size: 62.5%; 
     font-family: var(--fuentePrincipal);
+    font-size: 15px;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+header,
+body, 
+h1, 
+h2,
+h3,
+p{
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
     background-color: var(--blanco);
-    font-size: 1.6rem;
-    line-height: 1.5;
 }
 
 main{
@@ -30,57 +35,34 @@ main{
 }
 
 /*ENCABEZADO Y BARRA DE NAVEGACIÓN*/
-header{
+.encabezado{
     background-color: var(--primario);
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /*Separa el contenido del header*/
 }
 
-h1{
-    margin: 0;
+.encabezado__titulo{
+    text-align: center;
     background-color: var(--secundario);
-    padding: 0.4rem 2rem;
     color: var(--blanco);
-    font-family: var(--fuentePrincipal);
-    font-size: 6.5rem;
 }
 
-.navegador{
+.encabezado__navegador{
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
 }
 
-.navegador__link{
+.encabezado__navegador__link{
+    margin-left: 15px;
     text-decoration: none;
     color: var(--blanco);
 }
 
-.navegador__link:hover{
+.encabezado__navegador__link:hover{
     color: var(--secundarioOscuro);
 }
 
 /*SECCION DE INSTITUCIÓN*/
-.nosotros{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--blancoSecundario);
-    padding: 2rem;
-    border-radius: 0.3rem;
-}
-
-#nosotros__textos__titulo{
-    font-size: 5rem;
-    margin: 0rem 1rem;
-    color: var(--primarioOscuro);
-}
-
-.nosotros__textos__parrafo{
-    margin: 0.5rem 1rem;
-}
-
 .nosotros__textos__carrousel{
     position: relative;
     overflow: hidden;
@@ -113,54 +95,30 @@ h1{
 }
 
 /*SECCION DE SERVICIOS*/
-.servicios{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row: 1fr 1fr;
-}
 
-#nuestros{
-    font-size: 5rem;
-    text-align: center;
-    margin: 2rem 2rem;
-}
-
-.servicios__item{
-    background-color: var(--blancoSecundario);
-    margin: 1rem;
-}
-
-.servicios__item__titulo{
-    text-align: left;
-    margin: 0 0.5rem;
-}
-
-.servicios__item__parrafo{
-    margin: 0.5rem 0.5rem;
-}
 
 /*SECCION DE UBICACION*/
-.mapa{
-    background-color: var(--blancoSecundario);
-    border-radius: 0.3rem;
-}
 
-.mapa__titulo{
-    text-align: center;
-    font-size: 5rem;
-    color: var(--primarioOscuro);
-}
-
-.mapa__iframe{
-
-}
 
 /*SECCION FOOTER*/
-footer{
-    background-color: var(--primarioOscuro);
+.pie{
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    background-color: var(--primario);
     color: var(--blanco);
     margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 30px;
 }
 
+.pie__izquierdo{
+    margin: 0px;
+}
+
+.pie__derecho{
+
+}
+
+.pie__derecho__link{
+    
+}
