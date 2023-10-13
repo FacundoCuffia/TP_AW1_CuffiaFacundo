@@ -19,50 +19,53 @@
         </nav>
     </header>    
     <main>
-        <h2 id="">Contactenos</h2>
-        <section class="Contacto__derecha">
-            <form action="" method="post">
-                    <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text" name="nombre"/>
-                    <label for="email">E-mail:</label>
-                    <input id="email" type="text" name="email"/>
-                    <label for="seleccion">Seleccione el servicio de su interés:</label>
-                    <select name="seleccion" id="seleccion">
+        <h2 id="contacto-titulo">Contactenos</h2>
+        <div class="contacto__contenedor">
+            <section class="contacto__contenedor__izquierda">
+                <form class="formulario" action="/Contacto.html" method="post">
+                    <label class="formulario__label" for="nombre">Nombre:</label>
+                    <input class="formulario__input" id="nombre" type="text" name="nombre"/>
+                    <label class="formulario__label" for="email">E-mail:</label>
+                    <input class="formulario__input" id="email" type="text" name="email"/>
+                    <label class="formulario__label" for="seleccion">Seleccione el servicio de su interés:</label>
+                    <select class="formulario__select" name="seleccion" id="seleccion">
                         <option value="al">Alquiler</option>
                         <option value="as">Asesoramiento</option>
                         <option value="vn">Venta</option>
                     </select>
-                    <label for="comentario">Deje su mensaje:</label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
-                    <input type="submit" value="enviar"/>
-            </form>
-        </section>
-        <section class="Contacto__izquierda">
-            <p class="contacto__izquierda__parrafo">"Estamos aquí para escucharte y responder a tus preguntas. Por favor, completa este formulario y nos pondremos en contacto contigo lo antes posible. Tu opinión es importante para nosotros."</p>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
-                <path d="M11 4h2" />
-                <path d="M12 17v.01" />
-            </svg>
-            <p class="contacto__izquierda__parrafo">+543571612377</p>
-            <p class="contacto__izquierda__parrafo">"Si no cuentas con una dirección de correo electrónico, no te preocupes, estamos aquí para ayudarte de todas formas posibles. Además de este formulario, también puedes comunicarte con nosotros directamente por teléfono. Nuestro equipo de atención al cliente estará encantado de atenderte y responder a tus consultas. Tu comodidad es nuestra prioridad, ¡así que no dudes en llamarnos!"</p>
-          </section>
+                    <label class="formulario__label" for="comentario">Deje su mensaje:</label>
+                    <textarea class="formulario__textarea" name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                    <input class="formulario__boton" type="submit" value="enviar"/>
+                </form>
+            </section>
+            <section class="contacto__contenedor__derecha">
+                <p class="contacto__derecha__parrafo">"Estamos aquí para escucharte y responder a tus preguntas. Por favor, completa este formulario y nos pondremos en contacto contigo lo antes posible. Tu opinión es importante para nosotros."</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
+                    <path d="M11 4h2" />
+                    <path d="M12 17v.01" />
+                </svg>
+                <p class="contacto__derecha__parrafo">+543571612377</p>
+                <p class="contacto__derecha__parrafo">"Si no cuentas con una dirección de correo electrónico, no te preocupes, estamos aquí para ayudarte de todas formas posibles. Además de este formulario, también puedes comunicarte con nosotros directamente por teléfono. Nuestro equipo de atención al cliente estará encantado de atenderte y responder a tus consultas. Tu comodidad es nuestra prioridad, ¡así que no dudes en llamarnos!"</p>
+            </section>
+        </div>
     </main>
-    <footer>
-        <div class="footer__izquierda">
+    <footer class="pie">
+        <div class="pie__izquierdo">
             <p>GreenVille Inmobiliaria</p>
             <address>
-                Balcarce 534 - Córdoba - Córdoba capital
-                CP: X5000
+                Balcarce 534 - Córdoba - Córdoba capital CP: X5000
             </address>
             <p>Desarrollado por Facundo Cuffia 2023</p>
         </div>
-        <div class="footer__derecha">
-            <h4 class="footer__Derecha__redes">Redes sociales</h4>
-            <a href="#" class="footer__derecha__redes">Facebook</a>
-            <a href="#" class="footer__derecha__redes">Twitter</a>
-            <a href="#" class="footer__derecha__redes">Instagram</a>
+        <div class="pie__derecho">
+            <ul class="pie__derecho__lista">
+                <li>Redes sociales</li>
+                <li class="pie__derecho__lista_link"><a href="#" >Facebook</a></li>
+                <li class="pie__derecho__lista_link"><a href="#">Twitter</a></li>
+                <li class="pie__derecho__lista_link"><a href="#">Instagram</a></li>
+            </ul>
         </div>
     </footer>
 </body>

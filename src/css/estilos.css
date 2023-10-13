@@ -1,3 +1,6 @@
+/* **************************************************************/
+/* *GENERAL******************************************************/
+/* **************************************************************/
 :root {
     --primario: #144081;
     --primarioOscuro: rgb(37, 47, 68);
@@ -9,7 +12,6 @@
     --fuentePrincipal: 'Kanit', sans-serif;
 }
 
-/*PRESETEO DE LA WEB*/
 html{
     box-sizing: border-box;
     font-family: var(--fuentePrincipal);
@@ -31,12 +33,24 @@ body {
 }
 
 main{
-    margin: 3rem;
+    margin: 0px 5px 10px 5px;
 }
 
-/*ENCABEZADO Y BARRA DE NAVEGACIÓN*/
+/* **************************************************************/
+/* *ESTRUCTURA BÁSICA - (HEADER, MAIN, FOOTER)*******************/
+/* **************************************************************/
+
+/* Header */
 .encabezado{
     background-color: var(--primario);
+}
+
+@media(min-width: 768px){
+    .encabezado{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
 }
 
 .encabezado__titulo{
@@ -45,11 +59,25 @@ main{
     color: var(--blanco);
 }
 
+@media(min-width: 768px) {
+    .encabezado__titulo{
+        padding: 40px;
+        font-size: 45px;
+    }
+}
+
 .encabezado__navegador{
     display: flex;
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
+}
+
+@media(min-width: 768px) {
+    .encabezado__navegador{
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
 .encabezado__navegador__link{
@@ -62,51 +90,12 @@ main{
     color: var(--secundarioOscuro);
 }
 
-/*SECCION DE INSTITUCIÓN*/
-.servicios__titulo{
-    color: var(--primarioOscuro);
-    padding: 10px;
-    text-align: center;
+/* Main */
+main{
+    margin-top: 10px;
 }
 
-.nosotros__textos__carrousel{
-    position: relative;
-    overflow: hidden;
-}
-
-.nosotros__textos__carrousel__imagen{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    transition: background-image 0.05s step-end;
-}
-
-@keyframes carrousel {
-    0% {
-        background-image: url('/src/img/carrousel_1.jpg');
-    }
-    33% {
-        background-image: url('/src/img/carrousel_2.jpg');
-    }
-    66% {
-        background-image: url('/src/img/carrousel_3.jpg');
-    }
-    100% {
-        background-image: url('/src/img/carrousel_4.jpg');
-    }
-}
-
-.nosotros__textos__carrousel__imagen{
-    animation: carrousel 15s linear infinite;
-}
-
-/*SECCION DE SERVICIOS*/
-
-
-/*SECCION DE UBICACION*/
-
-
-/*SECCION FOOTER*/
+/* Footer */
 .pie{
     display: flex;
     justify-content: space-around;
@@ -119,4 +108,378 @@ main{
 
 .pie__izquierdo{
     margin: 0px;
+}
+.pie__derecho{
+    margin: 0px;
+}
+
+.pie__derecho__lista{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.pie__derecho__lista_link{
+    text-decoration: none;
+}
+
+/* **************************************************************/
+/* *PÁGINAS******************************************************/
+/* **************************************************************/
+
+/* -------------------------------------------------------------*/
+/* *Index.html***************************************************/
+/* -------------------------------------------------------------*/
+
+/* Sección "nosotros" */
+@media(min-width: 768px) {
+    .nosotros{
+        display: flex;
+        align-items: center;
+        justify-content: space-between ;
+    }
+}
+
+#nosotros__titulo{
+    color: var(--primarioOscuro);
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    #nosotros__titulo{
+        font-size: 30px;
+    }
+}
+
+.nosotros__textos{
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .nosotros__textos{
+        width: 50%;
+    }
+}
+
+.nosotros__textos__parrafo{
+    margin: 5px;
+}
+
+.nosotros__imagenes{
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .nosotros__imagenes{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+.nosotros__imagenes__carrousel{
+    width: 100%;
+    height: 40%;
+}
+
+.nosotros__imagenes__carrousel__imagen {
+  width: 100%; /* Asegura que el div ocupe el ancho completo */
+  height: 50vh; /* Ajusta la altura según tus necesidades */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  animation: carrousel 15s infinite;
+}
+
+@keyframes carrousel {
+    0% {
+        background-image: url('../img/carrousel_1.jpg');
+    }
+    33% {
+        background-image: url('../img/carrousel_2.jpg');
+    }
+    66% {
+        background-image: url('../img/carrousel_3.jpg');
+    }
+    100% {
+        background-image: url('../img/carrousel_4.jpg');
+    }
+}
+
+.nosotros__textos__carrousel__imagen{
+    animation: carrousel 15s linear infinite;
+}
+
+/* Seccion "servicios" */
+
+#servicios__titulo{
+    text-align: center;
+    color: var(--primarioOscuro);
+}
+
+@media(min-width: 768px) {
+    #servicios__titulo{
+        margin: 10px;
+    }
+}
+
+@media(min-width: 768px) {
+    .servicios__contenedor{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.servicios__contenedor__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--blancoSecundario);
+    margin: 10px 0px;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+@media(min-width: 768px) {
+    .servicios__contenedor__item{
+        margin: 10px;
+    }
+}
+
+.servicios__contenedor__item__imagen{
+    margin: 0px;
+    width: 100%;
+}
+
+.servicios__contenedor__item__imagen > img{
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+}
+
+.servicios__contenedor__item__titulo{
+    text-align: center;
+    margin-left: 5px;
+}
+
+.servicios__contenedor__item__parrafo{
+    margin: 5px 6px 5px 5px;
+}
+
+/* Sección mapa*/
+@media(min-width: 768px) {
+    .mapa__contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.mapa__titulo{
+    text-align: center;
+    margin: 10px;
+    color: var(--primarioOscuro);
+}
+
+.mapa__contenedor__interact{
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .mapa__contenedor__interact{
+        width: 50%;
+        margin: 20px;
+    }
+}
+
+.mapa__contenedor__interact__iframe{
+    object-fit: cover;
+    width: 100%;
+}
+
+.mapa__contenedor__horarios{
+    text-align: center;
+    background-color: var(--blancoSecundario);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media(min-width: 768px) {
+    .mapa__contenedor__horarios{
+        width: 50%;
+        padding: 100px 0px 100px 0px;
+        margin: 20px;
+        text-align: center;
+        background-color: var(--blancoSecundario);
+    }
+}
+
+/* -------------------------------------------------------------*/
+/* *Propiedades.html*********************************************/
+/* -------------------------------------------------------------*/
+#propiedades__titulo{
+    text-align: center;
+    color: var(--primarioOscuro);
+    margin: 3.8px;
+}
+
+.casa, .deptos, .lodges{
+    border-radius: 10px;
+    width:  100%;
+}
+
+@media(min-width: 768px) {
+    .casa__contenedor, .deptos__contenedor, .lodges__contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+    }
+}
+
+.casa__titulo,
+.deptos__titulo,
+.lodges__titulo{
+    color: var(--blanco);
+    text-align: center;
+    background-color: var(--secundario);
+}
+
+@media(min-width: 768px) {
+    .casa__titulo,
+    .deptos__titulo,
+    .lodges__titulo{
+        padding: 7px;
+    }
+}
+
+.casa__prop, 
+.deptos__prop,
+.lodges__prop{
+    background-color: var(--blancoSecundario);
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+@media(min-width: 768px) {
+    .casa__prop, 
+    .deptos__prop,
+    .lodges__prop{
+        background-color: var(--blancoSecundario);
+        border-radius: 10px;
+        margin: 20px 10px 20px 10px;
+    }
+}
+
+.casa__prop__imagen,
+.deptos__prop__imagen,
+.lodges__prop__imagen{
+    height: 30vh;
+    padding-top: 10px;
+}
+
+.casa__prop__imagen > img, 
+.deptos__prop__imagen > img,
+.lodges__prop__imagen > img{
+    object-fit: cover;
+    object-position: relative;
+    width: 100%;
+    height: 30vh;
+}
+
+.casa__prop__precio, 
+.deptos__prop__precio,
+.lodges__prop__precio{
+    text-align: center;
+    color: var(--secundario);
+}
+
+.casa__prop__descripcion, 
+.deptos__prop__descripcion,
+.lodges__prop__descripcion{
+    text-align: center;
+    margin: 5px;
+    color: var(--negro);
+    padding:  2px;
+}
+
+/* ----------------------------------------------------------*/
+/* *Contacto.html*********************************************/
+/* ----------------------------------------------------------*/
+
+.contacto__contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media(min-width: 768px) {
+    .contacto__contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 10px;
+    }
+}
+
+#contacto-titulo{
+    text-align: center;
+    color: var(--primarioOscuro);
+}
+
+@media(min-width: 768px) {
+    #contacto-titulo{
+        margin: 20px;
+    }
+}
+
+.contacto__contenedor__izquierda{
+    background-color: var(--blancoSecundario);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media(min-width: 768px) {
+    .contacto__contenedor__izquierda{
+        margin: 10px;
+    }
+}
+
+.contacto__contenedor__derecha{
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .contacto__contenedor__derecha{
+        margin: 10px;
+    }
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px;
+    color: var(--primarioOscuro);
+}
+
+.formulario__input, 
+.formulario__select,
+.formulario__textarea{
+    width: 95%;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.formulario__boton{
+    width: 100%;
+    height: 20%;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.formulario__boton:hover{
+    background-color: #9b9b9b;;
 }
