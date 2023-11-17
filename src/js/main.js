@@ -45,6 +45,7 @@ propiedades.propiedad.forEach((item)=>{
     }
 });
 
+//Renderizado de las variables en las secciones correspondientes.
 casa.innerHTML =  htmlARenderizarA;
 depto.innerHTML =  htmlARenderizarB;
 lodge.innerHTML =  htmlARenderizarC;
