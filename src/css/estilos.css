@@ -59,13 +59,13 @@ main{
     padding: 20px;
 }
 
-.encabezado__navegador__link{
+.navegador__link{
     margin-left: 15px;
     text-decoration: none;
     color: var(--blanco);
 }
 
-.encabezado__navegador__link:hover{
+.navegador__link:hover{
     color: var(--secundarioOscuro);
 }
 
